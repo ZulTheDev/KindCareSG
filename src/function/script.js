@@ -25,14 +25,14 @@ function toggleSubmenu(submenuType) {
 function openCat(catId) {
     if (catId === 'NeedTalk') {
         // Redirect to another HTML page
-        window.location.href = '/services/';
+        window.location.href = '/KindCareSG/services/';
     }
     else if (catId === 'LearnMentalHealth') {
-        window.location.href = '/Learn/main.html';
+        window.location.href = '/KindCareSG/Learn/main.html'';
     }
 }
 
 function Home(HomeBut) {
-    window.location.href = '/index.html';
+    window.location.href = '/KindCareSG/index.html';
 }
 
