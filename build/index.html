@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="css/default.css" rel="stylesheet">
+</head>
+
+<body class="bg-teal-100">
+    <!--Welcoming you-->
+    <div class="flex items-center justify-center bg-yellow-300 w-20 h-20 rounded-full overflow-hidden border-2 border-slate-600 shadow-2xl mx-auto">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover rounded-full">
+            <source src="/src/Media/English version (happy).mp4" type="video/mp4">
+            Browser no support.
+        </video>
+    </div>
+    <div class="bg-slate-500 w-150 h-2 mr-[15%] ml-[15%] conetent-box mt-[0.5%] rounded-2xl blur-50 shadow-2xl"></div>
+    <h1 class="font-bold font-[cursive] text-lg text-green-500 text-center">Welcome to KindCareSG!</h1>
+
+
+    <!--Catagories-->
+    <div class="flex justify-center space-x-4">
+        <!--Talking to our AI bot-->
+        <div class="bg-blue-200 w-[50px] h-[50px] rounded-full cursor-pointer" onclick="openCat('NeedTalk')" id="NeedTalk"></div>
+
+        <!--Learn about mental health-->
+        <div class="bg-pink-200 w-[50px] h-[50px] rounded-full cursor-pointer" onclick="openCat('LearnMentalHealth')" id="LearnMentalHealth"></div>
+    
+        <!--Forum-->
+        <div class="bg-purple-200 w-[50px] h-[50px] rounded-full cursor-pointer" onclick="openCat('DropAForum')" id="DropAForum"></div>
+    
+        <!--Need to talk in call-->
+        <div class="bg-orange-200 w-[50px] h-[50px] rounded-full cursor-pointer" onclick="openCat('NeedCall')" id="NeedCall"></div>
+    </div>
+    
+
+
+    <!--General information-->
+    <div>
+        <!--WHO ARE WE?-->
+        <h2 class="text-blue-500 font-black font-[cursive] text-xl cursor-pointer" onclick="toggleCollapse('WhoAreWe')">Who Are We?</h2>
+        <div id="WhoAreWe" class="hidden">
+            <p class="text-blue-700 font-[cursive] font-semibold text-[15px]">
+                We are youth from Singapore.<br>We want to emphasize the need for mental health and help our community to understand more about mental distress and spread awareness.<br>
+                We learned that individuals from the age of <b class="text-blue-800">13 to 16</b> and <b class="text-blue-800">17 to 25</b> (Beside that, Adults may also suffer!).
+            </p>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <!--WHAT IS THE PURPOSE OF THIS APPLICATION?-->
+        <h2 class="text-green-500 font-black font-[cursive] text-xl cursor-pointer" onclick="toggleCollapse('WhatPurpose')">What is the purpose?</h2>
+        <div id="WhatPurpose" class="hidden">
+            <p class="text-green-700 font-[cursive] font-semibold text-[15px]">
+                This Application is to bring you all the resources about mental health.<br>We want to help people with mental health to feel that they're not alone. <br>
+                Because most of us suffer alone, and we want to find someone to talk to.<br>So, we want to make them feel like they're part of our life. No one shall be alone in anything.We are all here and all for one.
+            </p>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <!--Our Team-->
+        <h2 class="text-purple-500 font-black font-[cursive] text-xl cursor-pointer" onclick="toggleCollapse('Team')">Meet our team!</h2>
+        <div id="Team" class="hidden">
+            <p class="text-purple-700 font-[cursive] font-semibold text-[15px]">
+                Zulfaqar - main coder (front-end 40% and coding 60%)<br>
+                ChatGPT - Summary and interaction engineer/UX engineer (Handles our front-end side)
+            </p>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <!--Web Application uses?-->
+        <h2 class="text-orange-500 font-black font-[cursive] text-xl cursor-pointer" onclick="toggleCollapse('MadeOf')">What we use to make this application?</h2>
+        <div id="MadeOf" class="hidden">
+            <p class="text-orange-700 font-[cursive] font-semibold text-[15px]">
+                Tailwind - Styling this web application <br>
+                HTML<br>
+                JavaScript<br>
+                ExpressJS - Using this to make the webpage load faster!
+            </p>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <footer>
+        <script src="/src/function/script.js"></script>
+    </footer>
+</body>
+
+</html>
