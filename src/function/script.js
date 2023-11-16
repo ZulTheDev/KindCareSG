@@ -1,38 +1,3 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-
-// Serve static files directory
-app.use(express.static(__dirname)); //check if this work
-app.use(express.static(path.join(__dirname, 'index.html')));
-app.use(express.static(path.join(__dirname, 'Learn')));
-
-// Server-Side-Rendering
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-
-// Dynamic route for learn directory
-app.get('/learn/:page', (req, res) => {
-    const page = req.params.page;
-    res.sendFile(path.join(__dirname, 'Learn', `${page}.html`));
-});
-
-// Dynamic route for service directory
-app.get('/services/:page', (req, res) => {
-    const page = req.params.page;
-    res.sendFile(path.join(__dirname, 'services', `${page}.html`));
-});
-
-// listening to this server
-const port = process.env.PORT || 5500;
-app.listen(port, () => {
-    console.log(`Server sucessfully loaded in http://localhost:${port}`);
-});
-
-
-
 //Collapsable text and content
 function toggleCollapse(sectionId) {
     var section = document.getElementById(sectionId);
