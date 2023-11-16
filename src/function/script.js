@@ -3,13 +3,15 @@ const path = require('path');
 const app = express();
 
 // Serve static files directory
-app.use(express.static(path.join(__dirname, 'Mental_Health')));
+app.use(express.static(__dirname)); //check if this work
+app.use(express.static(path.join(__dirname, 'index.html')));
 app.use(express.static(path.join(__dirname, 'Learn')));
 
 // Server-Side-Rendering
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
 
 // Dynamic route for learn directory
 app.get('/learn/:page', (req, res) => {
