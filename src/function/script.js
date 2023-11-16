@@ -3,12 +3,12 @@ const path = require('path');
 const app = express();
 
 // Serve static files directory
-app.use(express.static(path.join(__dirname, 'build')));
+//No more build folder since github don't understand.
 app.use(express.static(path.join(__dirname, 'Learn')));
 
 // Server-Side-Rendering
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html')); // Change this line
 });
 
 // Dynamic route for learn directory
@@ -26,45 +26,7 @@ app.get('/services/:page', (req, res) => {
 // listening to this server
 const port = process.env.PORT || 5500;
 app.listen(port, () => {
-    console.log(`Server sucessfully loaded in http://localhost:${port}`);
+    console.log(`Server successfully loaded in http://localhost:${port}`);
 });
 
-
-
-//Collapsable text and content
-function toggleCollapse(sectionId) {
-    var section = document.getElementById(sectionId);
-    section.classList.toggle('hidden');
-}
-//Sub menu for  learn directory
-function toggleSubmenu(submenuType) {
-    var submenu = null;
-
-    //Statement which one user click on
-    if (submenuType === 'Learn') {
-        submenu = document.getElementById('submenu');
-    } else if (submenuType === 'Hotline') {
-        submenu = document.getElementById('subhotline');
-    } else if (submenuType === 'Therapy') {
-        submenu = document.getElementById('subtherapy');
-    }
-
-    // Toggle hidden
-    if (submenu) {
-        submenu.classList.toggle('hidden');
-    }
-}
-
-function openCat(catId) {
-    if (catId === 'NeedTalk') {
-        // Redirect to another HTML page
-        window.location.href = '/build/';
-    }
-    else if (catId === 'LearnMentalHealth') {
-        window.location.href = '../Learn/main.html';
-    }
-}
-
-function Home(HomeBut) {
-    window.location.href = '/build/index.html';
-}
+// ... (rest of your code remains the same)
