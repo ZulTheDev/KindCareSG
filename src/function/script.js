@@ -59,10 +59,10 @@ function openCat(catId) {
         window.location.href = '/services/';
     }
     else if (catId === 'LearnMentalHealth') {
-        window.location.href = '../Learn/main.html';
+        window.location.href = '/Learn/main.html';
     }
 }
 
 function Home(HomeBut) {
-    window.location.href = '../index.html';
+    window.location.href = '/index.html';
 }
